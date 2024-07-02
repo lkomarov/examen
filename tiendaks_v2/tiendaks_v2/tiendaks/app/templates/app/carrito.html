@@ -1,0 +1,44 @@
+
+{% extends "app/base.html" %}
+
+{% block contenido %}
+<h2>Tu Carrito</h2>
+<div class="carrito">
+    {% if carrito.items.all %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in carrito.items.all %}
+                <tr>
+                    <td><img src="{{ item.producto.img_prod.url }}" alt="{{ item.producto.nombre }}" width="50" height="50"></td>
+                    <td>{{ item.producto.nombre }}</td>
+                    <td>{{ item.cantidad }}</td>
+                    <td>${{ item.subtotal }}</td>
+                    <td>
+                        <form method="post" action="{% url 'eliminar_del_carrito' item.id %}">
+                            {% csrf_token %}
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p><strong>Total: ${{ total }}</strong></p>
+        <form method="post" action="{% url 'limpiar_carrito' %}">
+            {% csrf_token %}
+            <button type="submit">Vaciar Carrito</button>
+        </form>
+    {% else %}
+        <p>Tu carrito está vacío.</p>
+    {% endif %}
+</div>
+{% endblock %}
+

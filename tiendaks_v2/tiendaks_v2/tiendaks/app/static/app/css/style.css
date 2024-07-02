@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.carrito img {
+    max-width: 50px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.user-actions a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Agregamos estilos para el botón de carrito con imagen */
+.cart-button {
+    display: inline-block;
+    width: 40px; /* Ajusta el tamaño según tu imagen */
+    height: 40px; /* Ajusta el tamaño según tu imagen */
+    background-image: url('carrito.png'); /* Ruta de tu imagen de carrito */
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center; /* Centra la imagen en el botón */
+    border: none;
+    cursor: pointer;
+}
+
+form {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form h2 {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.container th, .container td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.container th {
+    background-color: #f2f2f2;
+}
+
+.container tfoot td {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.container button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #555;
+}
+
+
+table{
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+/* Estilos para el carrito */
+#carrito {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#carrito li {
+    margin-bottom: 10px;
+}
+
+#carrito li button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#carrito li button:hover {
+    background-color: #555;
+}
+
+#productos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#productos li {
+    margin-bottom: 10px;
+}
+
+#productos li button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#productos li button:hover {
+    background-color: #555;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    width: 100%;
+    margin-top: 20px; /* Espacio adicional arriba del carrusel */
+}
+
+.carousel-inner img {
+    width: 100%; /* Ajusta el tamaño de la imagen al ancho del carrusel */
+    height: auto; /* Permite que la altura de la imagen se ajuste automáticamente */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ajusta el tamaño de los controles de navegación */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo de los íconos de navegación */
+}
+
+.carousel-indicators {
+    bottom: 10px; /* Posición de los indicadores */
+}
+
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo de los indicadores */
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.9); /* Color de fondo del indicador activo */
+}
+
+#cart, #products {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+#cart {
+    background-color: #f0f0f0;
+}
+
+#cart-items {
+    margin-bottom: 10px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+}

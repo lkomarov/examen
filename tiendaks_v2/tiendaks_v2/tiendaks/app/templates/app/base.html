@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    {% load static %}
+    {% block css %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'app/img/logo_cr.png' %}" alt="Logo de la tienda">
+            </div>
+            <ul class="menu">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                <li><a href="{% url 'agregar_producto' %}">Agregar productos</a></li>
+                <li><a href="{% url 'listar_producto' %}">Catálogo</a></li>
+            </ul>
+            <div class="user-actions">
+                <a href="{% url 'carrito' %}" class="cart-button float-end">
+                    <div class="carrito float-end">
+                        <img src="{% static 'app/img/carrito.png' %}" alt="Icono de carrito">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <div class="sign_in_out float-end">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'salir' %}">Cerrar sesión</a>
+                    {% else %}
+                        <a href="{% url 'login' %}">Ingresar</a>
+                    {% endif %}
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        {% block contenido %}
+
+        {% endblock %}
+       
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p>Puedes ponerte en contacto con nosotros a través de:</p>
+                    <ul>
+                        <li>Email: xxx@xxx.com</li>
+                        <li>Teléfono: +1234567890</li>
+                        <li>Dirección: 123 Calle Principal, Ciudad, País</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+{% block js %}
+
+{% endblock %}
+</html>
